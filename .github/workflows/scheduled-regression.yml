@@ -30,7 +30,7 @@ jobs:
 
       - name: Run Playwright tests
         run: |
-          xvfb-run --auto-servernum npm run tag @regression_apiDecimal
+          xvfb-run --auto-servernum npm run tag @regression
         env:
           DISPLAY: ":99"
 

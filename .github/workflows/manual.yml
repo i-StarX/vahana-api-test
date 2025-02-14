@@ -6,7 +6,7 @@ on:
       TAG:
         description: "Type which test tag you want to run"
         required: false
-        default: "@regression_apiDecimal"
+        default: "@regression"
 
 permissions: write-all
 
