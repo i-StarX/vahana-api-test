@@ -1,0 +1,235 @@
+{
+  "cookies": [
+    {
+      "name": "path",
+      "value": "HTTPOnly",
+      "domain": "accounts.vahanacloud.com",
+      "path": "/assets/images",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "path",
+      "value": "HTTPOnly",
+      "domain": "console.vahanacloud.com",
+      "path": "/assets/images",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "path",
+      "value": "HTTPOnly",
+      "domain": "designer.vahanacloud.com",
+      "path": "/assets/frame",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "path",
+      "value": "HTTPOnly",
+      "domain": "account-management.vahanacloud.com",
+      "path": "/assets/frame",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "path",
+      "value": "HTTPOnly",
+      "domain": "data-modeler.vahanacloud.com",
+      "path": "/assets/frame",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "path",
+      "value": "HTTPOnly",
+      "domain": "application-management.vahanacloud.com",
+      "path": "/assets/frame",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "path",
+      "value": "HTTPOnly",
+      "domain": "accounts.vahanacloud.com",
+      "path": "/assets",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "path",
+      "value": "HTTPOnly",
+      "domain": "accounts.vahanacloud.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "SSID",
+      "value": "2614509729422756",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": 1758722441.782606,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ILG",
+      "value": "cd7130d8-2804-4254-8e48-5850c1f1277a",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": 1758722441.782737,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "USER_ID",
+      "value": "NB7PXONC0YVR2WIA0NXK",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": 1758722441.782772,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "USERNAME",
+      "value": "rashmi.trivedi@istar-x.com",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": 1758722441.782792,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "DEFAULT_ACCOUNT_ID",
+      "value": "27394168058586493447709",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "DEFAULT_ACCOUNT_NAME",
+      "value": "Vahana Core Product",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "DEFAULT_ACCOUNT_HIERARCHY",
+      "value": "arn:27394168058586493447709_AC",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "WORKSPACE_CREATION",
+      "value": "false",
+      "domain": ".console.vahanacloud.com",
+      "path": "/",
+      "expires": 1758722441.782878,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "TUTORIAL",
+      "value": "false",
+      "domain": ".console.vahanacloud.com",
+      "path": "/",
+      "expires": 1758722441.782899,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "vc_show_overlay",
+      "value": "false",
+      "domain": ".console.vahanacloud.com",
+      "path": "/",
+      "expires": 1758722441.782918,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ACCESS_LEVEL",
+      "value": "arn:26615172991897135880142_WS",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": 1758722441.782936,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "path",
+      "value": "HTTPOnly",
+      "domain": "console.vahanacloud.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "WORKSPACE_NAME",
+      "value": "AutomationTestingPoC",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "WORKSPACE_ID",
+      "value": "26615172991897135880142",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "DEFAULT_ACCOUNT_USER_ROLE",
+      "value": "DEVELOPER",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}

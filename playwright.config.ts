@@ -29,9 +29,9 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    permissions: ['geolocation'],
-    geolocation: { latitude: -33.8698439, longitude: 151.2082848 },
-    screenshot: 'only-on-failure'
+    screenshot: 'only-on-failure',
+    storageState: './.auth/session.json',
+    headless: true
   },
   timeout: 2 * 60 * 1000,
   globalTimeout: 25 * 60 * 1000,
