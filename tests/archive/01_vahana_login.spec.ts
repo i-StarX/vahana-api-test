@@ -1,16 +1,13 @@
 import { test, expect } from '@playwright/test';
-import * as APIGateway from '../../src/helper/apiGateway.min.cjs';
+import { doPostByUrl } from '../../src/helper/apiGateway.min.cjs';
 
 test.beforeEach(async({page})=> {
 
-    // const scriptPath = `${process.cwd()}/src/helper/apiGateway.min.cjs`;
-    // await page.addScriptTag({ path: scriptPath });
-
     await page.goto('https://accounts.vahanacloud.com/');
-
-    await page.exposeFunction("doPostByUrl", APIGateway.doPostByUrl);
-
-    const response = await page.evaluateHandle(async () => {
+    
+    await page.exposeFunction("doPostByUrl", doPostByUrl);
+    
+    const response = await page.evaluate(async () => {
 
         const env = {
             "production": true,
@@ -37,10 +34,10 @@ test.beforeEach(async({page})=> {
         const body = { "a1": "b1" };
 
         const url = '/esb/esb/service-executor/execute-plain';
-        window.global = window;
-        return await window.global.doPostByUrl(env, headers, body, url);
-    });
-    
+        
+        return await (window as any).doPostByUrl(env, headers, body, url);
+    },);
+
     await console.log("API Response:", response);
    
 });

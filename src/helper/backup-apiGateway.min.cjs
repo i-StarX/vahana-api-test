@@ -5,7 +5,6 @@ const dom = new JSDOM(`<!DOCTYPE html><p>Hello</p>`);
 global.navigator = dom.window.navigator;
 
 const filePath = ".auth/token.json";
-// fs.writeFileSync(filePath, "", "utf8");
 
 const write = {
   Storage: {
@@ -52,7 +51,7 @@ function writeToFile(data) {
       if (writeErr) {
         console.error("Error writing to file", writeErr);
       } else {
-        // console.log("Data updated successfully");
+        console.log("Data updated successfully");
       }
     });
   });
@@ -159,7 +158,7 @@ const read = {
     );
   })([
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(31);
       r(32);
@@ -176,7 +175,7 @@ const read = {
       t.Security = i;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -358,9 +357,8 @@ const read = {
             (e.prototype.setGuid = function (e) {
               return n(this, void 0, void 0, function () {
                 var t, r;
-                console.log("step 5 setting GUID");
                 return o(this, function (n) {
-                  // console.log("n.label: ", n.label);
+                  console.log("n.label: ", n.label);
                   switch (n.label) {
                     case 0:
                       return (
@@ -390,34 +388,31 @@ const read = {
               });
             }),
             (e.prototype.handleGUID = function () {
-              // console.log("handleGUI function");
-              console.log("step 4");
+              console.log("handleGUI function");
               return n(this, void 0, void 0, function () {
                 var e, t, r, n, i;
                 return o(this, function (o) {
-                  // console.log("o 396: ", o);
+                  console.log("o 396: ", o);
                   switch (o.label) {
                     case 0:
-                      // console.log("handleGUID case 0 get PUBLICKEY");
+                      console.log("handleGUID case 0 get PUBLICKEY 399");
                       return [
                         4,
-                        read.Storage.getInstance().getItemValue(
-                          this.makeKey(c.StorageConstant.PUBLICKEY)
-                        ),
+                        // read.Storage.getInstance().getItemValue(
+                        //   this.makeKey(c.StorageConstant.PUBLICKEY)
+                        // ),
                       ];
                     case 1:
-                      // console.log("handleGUID case 1 get JWTTOKEN");
-                      return (
-                        (e = o.sent()),
-                        [
-                          4,
-                          read.Storage.getInstance().getItemValue(
-                            this.makeKey(c.StorageConstant.JWTTOKEN)
-                          ),
-                        ]
-                      );
+                      console.log("handleGUID case 1 get JWTTOKEN 405");
+                      return (e = o.sent());
+                    // [
+                    //   4,
+                    // read.Storage.getInstance().getItemValue(
+                    //   this.makeKey(c.StorageConstant.JWTTOKEN)
+                    // ),
+                    // ]
                     case 2:
-                      // console.log("handleGUID case 1 get GUID");
+                      console.log("handleGUID case 1 get GUID");
                       return (
                         (t = o.sent()),
                         e && t
@@ -443,7 +438,6 @@ const read = {
                         ? (alert("Error"), this.clearCredsAll(), [2])
                         : [3, 5];
                     case 4:
-                      console.log("step 5");
                       this.setGuid(
                         s.EnvironmentStore.getInstance()
                           .getEnvironment()
@@ -458,36 +452,34 @@ const read = {
               });
             }),
             (e.prototype.isRegistered = function () {
-              // console.log("isRegistered function");
+              console.log("isRegistered function");
               return n(this, void 0, void 0, function () {
                 var e, t;
                 return o(this, function (r) {
-                  // console.log("r.label: ", r.label);
+                  console.log("r.label: ", r.label);
                   switch (r.label) {
                     case 0:
-                      // console.log("isRegistered case 0 get PUBLICKEY");
-                      return (
-                        // u.Storage.getInstance().clear(
-                        //   this.makeKey("regisFail")
-                        // ),
-                        [
-                          4,
-                          read.Storage.getInstance().getItemValue(
-                            this.makeKey(c.StorageConstant.PUBLICKEY)
-                          ),
-                        ]
-                      );
+                      console.log("isRegistered case 0 get PUBLICKEY 461");
+                    // return (
+                    // u.Storage.getInstance().clear(
+                    //   this.makeKey("regisFail")
+                    // ),
+                    // [
+                    //   4,
+                    // read.Storage.getInstance().getItemValue(
+                    //   this.makeKey(c.StorageConstant.PUBLICKEY)
+                    // ),
+                    // ]
+                    // );
                     case 1:
-                      // console.log("isRegistered case 1 get JWTTOKEN");
-                      return (
-                        (e = r.sent()),
-                        [
-                          4,
-                          read.Storage.getInstance().getItemValue(
-                            this.makeKey(c.StorageConstant.JWTTOKEN)
-                          ),
-                        ]
-                      );
+                      console.log("isRegistered case 1 get JWTTOKEN 472");
+                      return (e = r.sent());
+                    // [
+                    //   4,
+                    // read.Storage.getInstance().getItemValue(
+                    //   this.makeKey(c.StorageConstant.JWTTOKEN)
+                    // ),
+                    // ]
                     case 2:
                       return (t = r.sent()), [2, null !== e && null !== t];
                   }
@@ -524,7 +516,7 @@ const read = {
                 return o(this, function (n) {
                   switch (n.label) {
                     case 0:
-                      // console.log("userCredentials case 0");
+                      console.log("userCredentials case 0");
                       return [
                         4,
                         write.Storage.getInstance().setItem(
@@ -533,7 +525,7 @@ const read = {
                         ),
                       ];
                     case 1:
-                      // console.log("userCredentials case 1");
+                      console.log("userCredentials case 1");
                       return (
                         n.sent(),
                         [
@@ -545,7 +537,7 @@ const read = {
                         ]
                       );
                     case 2:
-                      // console.log("userCredentials case 2");
+                      console.log("userCredentials case 2");
                       return n.sent(), [2];
                   }
                 });
@@ -604,19 +596,19 @@ const read = {
                 return o(this, function (o) {
                   switch (o.label) {
                     case 0:
-                      // console.log("generateTxnKey case 0 get PUBLICKEY");
+                      console.log("generateTxnKey case 0 get PUBLICKEY");
                       return (
                         (r = this.randomString(
                           32 - this.dateParsing.dateFormat("txnDate", e).length
                         )),
                         (r = this.dateParsing.dateFormat("txnDate", e) + r),
-                        (a = (i = JSON).parse),
-                        [
-                          4,
-                          read.Storage.getInstance().getItemValue(
-                            this.makeKey(c.StorageConstant.PUBLICKEY)
-                          ),
-                        ]
+                        (a = (i = JSON).parse)
+                        // [
+                        //   4,
+                        // read.Storage.getInstance().getItemValue(
+                        //   this.makeKey(c.StorageConstant.PUBLICKEY)
+                        // ),
+                        // ]
                       );
                     case 1:
                       return (
@@ -666,13 +658,13 @@ const read = {
               }
             }),
             (e.prototype.authCredentials = function (e, t, r) {
-              // console.log("authCredentials function");
+              console.log("authCredentials function");
               return n(this, void 0, void 0, function () {
                 var n, i;
                 return o(this, function (o) {
                   switch (o.label) {
                     case 0:
-                      // console.log("authCredentials set PUBLICKEY");
+                      console.log("authCredentials set PUBLICKEY");
                       for (i in ((n = {}), e))
                         "public-pem" === i &&
                           (n.key = this.security.aesEncryption.encryptText(
@@ -680,24 +672,22 @@ const read = {
                             t
                           ));
                       return [
-                        4,
-                        write.Storage.getInstance().setItem(
-                          this.makeKey(c.StorageConstant.PUBLICKEY),
-                          n.key
-                        ),
+                        // 4,
+                        // write.Storage.getInstance().setItem(
+                        //   this.makeKey(c.StorageConstant.PUBLICKEY),
+                        //   n.key
+                        // ),
                       ];
                     case 1:
-                      // console.log("authCredentials set JWTTOKEN");
-                      return (
-                        o.sent(),
-                        [
-                          4,
-                          write.Storage.getInstance().setItem(
-                            this.makeKey(c.StorageConstant.JWTTOKEN),
-                            r
-                          ),
-                        ]
-                      );
+                      console.log("authCredentials set JWTTOKEN");
+                      return o.sent();
+                    // [
+                    //   4,
+                    // write.Storage.getInstance().setItem(
+                    //   this.makeKey(c.StorageConstant.JWTTOKEN),
+                    //   r
+                    // ),
+                    // ]
                     case 2:
                       return o.sent(), [2];
                   }
@@ -710,7 +700,7 @@ const read = {
       t.RequestUtility = l;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(34),
         o = (function () {
@@ -732,7 +722,7 @@ const read = {
       t.EnvironmentStore = o;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(4),
         o = r(14),
@@ -770,9 +760,9 @@ const read = {
             (e.prototype.getItem = function (e) {
               return this.storageApi.getItem(this.getKeyName(e));
             }),
-            (e.prototype.clear = function (e) {
-              // sessionStorage.removeItem(this.getKeyName(e));
-            }),
+            // (e.prototype.clear = function (e) {
+            //   sessionStorage.removeItem(this.getKeyName(e));
+            // }),
             (e.prototype.getItemValue = function (e) {
               var t = this;
               return new Promise(function (r, i) {
@@ -821,7 +811,7 @@ const read = {
       t.Storage = a;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n,
         o =
           (this && this.__extends) ||
@@ -865,7 +855,7 @@ const read = {
       t.Logger = a;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}
@@ -891,7 +881,7 @@ const read = {
       t.UserResponse = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}
@@ -915,7 +905,7 @@ const read = {
       t.ErrorConstant = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}
@@ -932,7 +922,7 @@ const read = {
       t.StorageConstant = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(41),
         o = r(43),
@@ -947,7 +937,7 @@ const read = {
       t.Validators = s;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n,
         o =
           (this && this.__extends) ||
@@ -1061,7 +1051,7 @@ const read = {
       t.ErrorHandler = u;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = function () {
         this.pwRequest = {
@@ -1096,7 +1086,7 @@ const read = {
       t.PlatwareRequestModel = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}
@@ -1163,7 +1153,7 @@ const read = {
       t.DateParsing = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(22),
         o = r(40),
@@ -1243,7 +1233,7 @@ const read = {
       t.RequestProprty = a;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -1392,15 +1382,14 @@ const read = {
           return (
             (e.prototype.runLifeCycle = function () {}),
             (e.prototype.doRegister = function (e) {
-              // console.log("doRegister: Registering the user");
+              console.log("doRegister: Registering the user");
               return n(this, void 0, void 0, function () {
                 var t, r, n, i;
                 return o(this, function (o) {
-                  // console.log("1396 o value:", o);
+                  console.log("1396 o value:", o);
                   switch (o.label) {
                     case 0:
-                      // console.log("doRegister case 0 1398");
-                      console.log("step 7");
+                      console.log("doRegister case 0 1398");
                       return (
                         o.trys.push([0, 13, , 14]),
                         g.Logger.getInstance().log(
@@ -1414,8 +1403,7 @@ const read = {
                         [4, this.requestUtility.isRegistered()]
                       );
                     case 1:
-                      // console.log("doRegister case 1 1412");
-                      console.log("step 8");
+                      console.log("doRegister case 1 1412");
                       const request = o.sent()
                         ? [3, 11]
                         : (g.Logger.getInstance().log(
@@ -1425,12 +1413,10 @@ const read = {
                             4,
                             this.requestController.getRegistrationRequest(e),
                           ]);
-                      // console.log("line 1423", request);
-
+                      console.log("line 1423", request);
                       return request;
-
                     case 2:
-                      // console.log("doRegister case 2 1423");
+                      console.log("doRegister case 2 1423");
                       return (
                         (r = o.sent()),
                         g.Logger.getInstance().log(
@@ -1447,7 +1433,7 @@ const read = {
                         ]
                       );
                     case 3:
-                      // console.log("doRegister case 3 1440");
+                      console.log("doRegister case 3 1440");
                       return (n = o.sent()).status
                         ? [
                             4,
@@ -1458,12 +1444,13 @@ const read = {
                           ]
                         : [3, 6];
                     case 4:
-                      // console.log("doRegister case 4 1451");
+                      console.log("doRegister case 4 1451");
                       return o.sent(), [4, this.requestUtility.isRegistered()];
                     case 5:
-                      // console.log("doRegister case 5 1454");
+                      console.log("doRegister case 5 1454");
                       return [2, o.sent()];
                     case 6:
+                      console.log("doRegister case 6 1471");
                       return (
                         o.trys.push([6, 9, , 10]),
                         [
@@ -1475,6 +1462,7 @@ const read = {
                         ]
                       );
                     case 7:
+                      console.log("doRegister case 7 1483");
                       return (
                         (i = o.sent()),
                         [
@@ -1487,18 +1475,25 @@ const read = {
                         ]
                       );
                     case 8:
+                      console.log("doRegister case 8 1496");
                       return o.sent(), [3, 10];
                     case 9:
+                      console.log("doRegister case 9 1499");
                       throw o.sent();
                     case 10:
+                      console.log("doRegister case 10 1502");
                       return [3, 12];
                     case 11:
+                      console.log("doRegister case 11 1505");
                       return [2, Promise.resolve(!0)];
                     case 12:
+                      console.log("doRegister case 12 1508");
                       return [3, 14];
                     case 13:
+                      console.log("doRegister case 13 1511");
                       throw o.sent();
                     case 14:
+                      console.log("doRegister case 114 1514");
                       return [2];
                   }
                 });
@@ -1784,7 +1779,6 @@ const read = {
               });
             }),
             (e.prototype.callNetworkController = function (e, t, r, n, o, i) {
-              console.log("step 10");
               return (
                 g.Logger.getInstance().log(
                   "==calling Network Layer with request",
@@ -1868,7 +1862,6 @@ const read = {
             (e.prototype.doEndPointCall = function (e, t, r) {
               return n(this, void 0, void 0, function () {
                 var n, i, a, s, u, l;
-                console.log("step 6");
                 return o(this, function (o) {
                   switch (o.label) {
                     case 0:
@@ -1892,7 +1885,6 @@ const read = {
                         (e.envProps.envProps.lon = i.longitude),
                         (o.label = 2);
                     case 2:
-                      console.log("step 6 registering");
                       return [4, this.doRegister(e)];
                     case 3:
                       return o.sent()
@@ -1988,7 +1980,7 @@ const read = {
       t.ServiceController = y;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = function (e, t) {
         (this.code = e), (this.response = t);
@@ -1996,7 +1988,7 @@ const read = {
       t.CustomError = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(4),
         o = r(3),
@@ -2033,7 +2025,7 @@ const read = {
       t.AppConfigStore = a;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -3341,7 +3333,7 @@ const read = {
       t.DocumentManager = l;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -3584,7 +3576,6 @@ const read = {
                         ),
                         (o.label = 1);
                     case 1:
-                      console.log("step 2");
                       return (
                         o.trys.push([1, 3, , 4]),
                         (n = this.requestController.mapToPlatwareRequestUrl(
@@ -3610,7 +3601,7 @@ const read = {
       t.AppController = c;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(19),
         o = r(15),
@@ -3622,11 +3613,9 @@ const read = {
           function e() {}
           return (
             (e.prototype.doCall = function (e, t, r, n, o, i) {
-              console.log("step 12");
               return this.setNetwotkAPI(), this.doNetworkCall(e, t, r, n, o, i);
             }),
             (e.prototype.setNetwotkAPI = function () {
-              console.log("step 13");
               var e =
                 o.AppConfigStore.getInstance().getConfiguration().networkDriver;
               switch (
@@ -3645,7 +3634,6 @@ const read = {
                     s.Logger.getInstance().log("Using XMLHTTP Driver");
                   break;
                 default:
-                  console.log("step 13 choosen default");
                   (this.networkApi = new n.FetchWrapper()),
                     s.Logger.getInstance().log(
                       "Network API doesn't match to passed configuartion"
@@ -3653,7 +3641,6 @@ const read = {
               }
             }),
             (e.prototype.doNetworkCall = function (e, t, r, n, o, i) {
-              console.log("step 14");
               return (
                 s.Logger.getInstance().log(
                   "Calling Post method of Network API",
@@ -3679,7 +3666,7 @@ const read = {
       t.NetworkController = c;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -3812,7 +3799,6 @@ const read = {
           function e() {}
           return (
             (e.prototype.doPostCall = function (e) {
-              console.log("step 15");
               var t = this,
                 r = this.getResponseHeaders(e.header, e.body);
               return (
@@ -3851,7 +3837,6 @@ const read = {
                     });
                   })
                   .catch(function (e) {
-                    console.log("line 3854",e);
                     throw a.UserResponse.mapAPIResponse(
                       !1,
                       {
@@ -3887,7 +3872,7 @@ const read = {
       t.FetchWrapper = s;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(38),
         o = (function () {
@@ -3902,7 +3887,7 @@ const read = {
       t.WebWorkerWrapper = o;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(39),
         o = r(48),
@@ -3928,7 +3913,7 @@ const read = {
               this.requestUtility.handleGUID();
             }),
             (e.prototype.getRegistrationRequest = function (e) {
-              console.log("line 3924", e);
+              console.log("getRegistrationRequest 3923");
               return this.registartionService.getRegistrartionRequest(e);
             }),
             (e.prototype.getGatewayRequest = function (e) {
@@ -3952,7 +3937,6 @@ const read = {
             }),
             (e.prototype.mapToPlatwareRequestUrl = function (e, t, r) {
               try {
-                console.log("step 3");
                 return (
                   this.initRequest(),
                   new d.PrepareRequestForEndPoint().mapToPlatwareRequestEndPoint(
@@ -3962,7 +3946,6 @@ const read = {
                   )
                 );
               } catch (e) {
-                console.log("step 3 error", e);
                 throw u.ErrorHandler.getErrors(c.ErrorConstant.REQUESTINVALID);
               }
             }),
@@ -3972,7 +3955,7 @@ const read = {
       t.RequestController = h;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}
@@ -3989,7 +3972,7 @@ const read = {
       t.ApiType = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(10),
         o = (function () {
@@ -4006,7 +3989,7 @@ const read = {
       t.SetPWRequest = o;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(1),
         o = (function () {
@@ -4055,7 +4038,7 @@ const read = {
       t.Handlers = o;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -4237,7 +4220,7 @@ const read = {
                         throw p.UserResponse.mapAPIResponse(!1, t, "PW-0003");
                       return [
                         4,
-                        s.Storage.getInstance().getItemValue(
+                        read.Storage.getInstance().getItemValue(
                           this.requestUtility.makeKey(
                             d.StorageConstant.REGISTERATIONFAIL
                           )
@@ -4248,7 +4231,7 @@ const read = {
                     case 2:
                       return [
                         4,
-                        s.Storage.getInstance().getItemValue(
+                        read.Storage.getInstance().getItemValue(
                           this.requestUtility.makeKey(
                             d.StorageConstant.REGISTERATIONFAIL
                           )
@@ -4270,7 +4253,7 @@ const read = {
                         ? n
                           ? [3, 7]
                           : (this.requestUtility.clearCredsAll(),
-                            s.Storage.getInstance().setItem(
+                            read.Storage.getInstance().setItem(
                               this.requestUtility.makeKey(
                                 d.StorageConstant.REGISTERATIONFAIL
                               ),
@@ -4348,7 +4331,7 @@ const read = {
       t.GatewayResponseHandler = h;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -4564,7 +4547,7 @@ const read = {
       e.exports = r;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__assign) ||
           function () {
@@ -4908,21 +4891,20 @@ const read = {
               }
             }),
             (module.exports.doPostByUrl = function (e, t, r, n, s, c) {
-              // console.log("env:", e);
-              // console.log("headers:", t);
-              // console.log("body:", r);
-              // console.log("url:", n);
+              console.log("env:", e);
+              console.log("headers:", t);
+              console.log("body:", r);
+              console.log("url:", n);
               var d = this;
               return new Promise(function (p, g) {
                 return o(d, void 0, void 0, function () {
                   var o, d;
                   return i(this, function (i) {
-                    // console.log("dopostbyurl function");
-                    // console.log("dopostbyurl switch:", i.label);
+                    console.log("dopostbyurl function");
+                    console.log("dopostbyurl switch:", i.label);
                     switch (i.label) {
                       case 0:
-                        // console.log("dopostbyurl function - case 0");
-                        console.log("step 1");
+                        console.log("dopostbyurl function - case 0");
                         return (
                           i.trys.push([0, 4, , 5]),
                           a.Logger.getInstance().log(
@@ -4955,10 +4937,10 @@ const read = {
                             : [3, 2]
                         );
                       case 1:
-                        // console.log("dopostbyurl function - case 1");
+                        console.log("dopostbyurl function - case 1");
                         return (o = i.sent()), p(o), [3, 3];
                       case 2:
-                        // console.log("dopostbyurl function - case 2");
+                        console.log("dopostbyurl function - case 2");
                         p(
                           h.UserResponse.mapAPIResponse(!1, {
                             status: "PW003",
@@ -4968,13 +4950,13 @@ const read = {
                         ),
                           (i.label = 3);
                       case 3:
-                        // console.log("dopostbyurl function - case 3");
+                        console.log("dopostbyurl function - case 3");
                         return [3, 5];
                       case 4:
-                        // console.log("dopostbyurl function - case 4");
+                        console.log("dopostbyurl function - case 4");
                         return (d = i.sent()), g(d), [3, 5];
                       case 5:
-                        // console.log("dopostbyurl function - case 5");
+                        console.log("dopostbyurl function - case 5");
                         return [2];
                     }
                   });
@@ -4996,7 +4978,7 @@ const read = {
               }
             }),
             (e.prototype.getStorageAPI = function () {
-              return g.Storage.getInstance();
+              return read.Storage.getInstance();
             }),
             (e.prototype.getEncryptionAPI = function () {
               return new f.Security();
@@ -5172,7 +5154,7 @@ const read = {
       t.APIGateway = I;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}
@@ -5254,7 +5236,7 @@ const read = {
       t.CustomConsole = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e(e) {
@@ -5423,7 +5405,7 @@ const read = {
           );
         })([
           function (e, t, r) {
-            "use strict";
+            // "use strict";
             Object.defineProperty(t, "__esModule", { value: !0 }),
               (t.RSAKey = void 0),
               (t.parseBigInt = i);
@@ -6708,7 +6690,7 @@ const read = {
               i);
           },
           function (e, t, r) {
-            "use strict";
+            // "use strict";
             Object.defineProperty(t, "__esModule", { value: !0 }),
               (t.JSEncrypt = void 0);
             var n = r(4),
@@ -6891,7 +6873,7 @@ const read = {
               });
           },
           function (e, t, r) {
-            "use strict";
+            // "use strict";
             r.r(t),
               r.d(t, "Encryption", function () {
                 return i;
@@ -6905,7 +6887,7 @@ const read = {
             }
           },
           function (e, t, r) {
-            "use strict";
+            // "use strict";
             Object.defineProperty(t, "__esModule", { value: !0 });
             var n =
                 "function" == typeof Symbol &&
@@ -7623,7 +7605,7 @@ const read = {
               });
           },
           function (e, t, r) {
-            "use strict";
+            // "use strict";
             Object.defineProperty(t, "__esModule", { value: !0 });
             var n = (t.Hex = {}),
               o = void 0;
@@ -7656,7 +7638,7 @@ const read = {
             };
           },
           function (e, t, r) {
-            "use strict";
+            // "use strict";
             Object.defineProperty(t, "__esModule", { value: !0 });
             var n = (t.Base64 = {}),
               o = void 0;
@@ -7715,7 +7697,7 @@ const read = {
               });
           },
           function (e, t, r) {
-            "use strict";
+            // "use strict";
             Object.defineProperty(t, "__esModule", { value: !0 }),
               (t.RSAKey = void 0);
             var n = r(0);
@@ -7727,7 +7709,7 @@ const read = {
             });
           },
           function (e, t, r) {
-            "use strict";
+            // "use strict";
             Object.defineProperty(t, "__esModule", { value: !0 }),
               (t.BigInteger = void 0);
             var n = r(9);
@@ -7739,7 +7721,7 @@ const read = {
             });
           },
           function (e, t, r) {
-            "use strict";
+            // "use strict";
             function n(e, t) {
               if (!(e instanceof t))
                 throw new TypeError("Cannot call a class as a function");
@@ -8181,7 +8163,7 @@ const read = {
               (o.ONE = p(1));
           },
           function (e, t, r) {
-            "use strict";
+            // "use strict";
             Object.defineProperty(t, "__esModule", { value: !0 }),
               (t.SecureRandom = void 0);
             var n,
@@ -8211,7 +8193,7 @@ const read = {
               });
           },
           function (e, t, r) {
-            "use strict";
+            // "use strict";
             Object.defineProperty(t, "__esModule", { value: !0 }),
               (t.prng_newstate = function () {
                 return new n();
@@ -8249,7 +8231,7 @@ const read = {
               (t.rng_psize = 256);
           },
           function (e, t, r) {
-            "use strict";
+            // "use strict";
             Object.defineProperty(t, "__esModule", { value: !0 }),
               (t.hex2b64 = function (e) {
                 var t,
@@ -8279,7 +8261,7 @@ const read = {
       );
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e(e) {
@@ -8306,7 +8288,7 @@ const read = {
       t.RSAEncryption = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(35),
         o = (function () {
@@ -8331,7 +8313,7 @@ const read = {
       t.Environment = o;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e(e) {
@@ -8379,7 +8361,7 @@ const read = {
       t.EnvProps = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}
@@ -8393,7 +8375,7 @@ const read = {
       t.AxiosWrapper = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}
@@ -8412,7 +8394,7 @@ const read = {
       };
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -8555,7 +8537,6 @@ const read = {
           }
           return (
             (e.prototype.getRegistrartionRequest = function (e) {
-              console.log("step 9");
               return n(this, void 0, void 0, function () {
                 var t, r;
                 return o(this, function (n) {
@@ -8699,7 +8680,7 @@ const read = {
       t.RegistrationService = d;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}
@@ -8720,7 +8701,7 @@ const read = {
       t.HexUtility = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(9),
         o = r(6),
@@ -8792,7 +8773,7 @@ const read = {
       t.ArgumentsValidation = a;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}
@@ -8822,7 +8803,7 @@ const read = {
       t.ErrorMessage = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}
@@ -8840,7 +8821,7 @@ const read = {
       t.HttpParameterValidation = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -9045,7 +9026,7 @@ const read = {
     function (e, t, r) {
       var n, o;
       !(function (i, a, s) {
-        "use strict";
+        // "use strict";
         "undefined" != typeof window && r(46)
           ? void 0 ===
               (o = "function" == typeof (n = s) ? n.call(t, r, t, e) : n) ||
@@ -9056,7 +9037,7 @@ const read = {
           ? (a.exports = s())
           : (a.Fingerprint2 = s());
       })(0, this, function () {
-        "use strict";
+        // "use strict";
         void 0 === Array.isArray &&
           (Array.isArray = function (e) {
             return "[object Array]" === Object.prototype.toString.call(e);
@@ -10911,7 +10892,7 @@ const read = {
       }).call(this, {});
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}
@@ -10978,7 +10959,7 @@ const read = {
       t.PrepareDataValidation = n;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -11183,24 +11164,22 @@ const read = {
                 return o(this, function (o) {
                   switch (o.label) {
                     case 0:
-                      // console.log("setServiceHeaders case 0 get JWTTOKEN");
-                      return (
-                        (n = ""),
-                        [
-                          4,
-                          c.Storage.getInstance().getItemValue(
-                            this.requestUtility.makeKey(
-                              p.StorageConstant.JWTTOKEN
-                            )
-                          ),
-                        ]
-                      );
+                      console.log("setServiceHeaders case 0 get JWTTOKEN");
+                      return (n = "");
+                    // [
+                    //   4,
+                    // read.Storage.getInstance().getItemValue(
+                    //   this.requestUtility.makeKey(
+                    //     p.StorageConstant.JWTTOKEN
+                    //   )
+                    // ),
+                    // ]
                     case 1:
                       return (
                         (a = o.sent()),
                         [
                           4,
-                          c.Storage.getInstance().getItemValue(
+                          read.Storage.getInstance().getItemValue(
                             this.requestUtility.makeKey(
                               p.StorageConstant.AUTHJWTTOKEN
                             )
@@ -11233,7 +11212,7 @@ const read = {
                           n),
                         [
                           4,
-                          c.Storage.getInstance().getItemValue(
+                          read.Storage.getInstance().getItemValue(
                             this.requestUtility.makeKey(
                               p.StorageConstant.LOGINID
                             )
@@ -11347,7 +11326,7 @@ const read = {
       t.GatewayService = g;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -11581,7 +11560,7 @@ const read = {
                         this.setHeaderKeys(r, i, u, "ER_ER"),
                         [
                           4,
-                          l.Storage.getInstance().getItemValue(
+                          read.Storage.getInstance().getItemValue(
                             this.requestUtility.makeKey("forceLogin")
                           ),
                         ]
@@ -11703,7 +11682,7 @@ const read = {
       t.AuthService = h;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(2),
         o = (function () {
@@ -11779,7 +11758,7 @@ const read = {
       t.PrepareRequest = o;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = r(2),
         o = (function () {
@@ -11809,7 +11788,7 @@ const read = {
       t.PrepareRequestForEndPoint = o;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -12015,24 +11994,22 @@ const read = {
                 return o(this, function (o) {
                   switch (o.label) {
                     case 0:
-                      // console.log("setServiceHeaders case 0 get JWTTOKEN");
-                      return (
-                        (n = ""),
-                        [
-                          4,
-                          c.Storage.getInstance().getItemValue(
-                            this.requestUtility.makeKey(
-                              p.StorageConstant.JWTTOKEN
-                            )
-                          ),
-                        ]
-                      );
+                      console.log("setServiceHeaders case 0 get JWTTOKEN");
+                      return (n = "");
+                    // [
+                    //   4,
+                    // read.Storage.getInstance().getItemValue(
+                    //   this.requestUtility.makeKey(
+                    //     p.StorageConstant.JWTTOKEN
+                    //   )
+                    // ),
+                    // ]
                     case 1:
                       return (
                         (s = o.sent()),
                         [
                           4,
-                          c.Storage.getInstance().getItemValue(
+                          read.Storage.getInstance().getItemValue(
                             this.requestUtility.makeKey(
                               p.StorageConstant.AUTHJWTTOKEN
                             )
@@ -12065,7 +12042,7 @@ const read = {
                           n),
                         [
                           4,
-                          c.Storage.getInstance().getItemValue(
+                          read.Storage.getInstance().getItemValue(
                             this.requestUtility.makeKey(
                               p.StorageConstant.LOGINID
                             )
@@ -12204,7 +12181,7 @@ const read = {
       t.EndPointService = g;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -12561,7 +12538,7 @@ const read = {
       t.AuthResponseHandler = g;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       var n =
           (this && this.__awaiter) ||
           function (e, t, r, n) {
@@ -12703,7 +12680,7 @@ const read = {
           }
           return (
             (e.prototype.readResponse = function (e, t) {
-              // console.log("readResponse function");
+              console.log("readResponse function");
               return n(this, void 0, void 0, function () {
                 return o(this, function (r) {
                   switch (r.label) {
@@ -12825,7 +12802,7 @@ const read = {
       t.RegistrationResponseHandler = h;
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 }),
         (t.controllerConst = {
           DMS: {
@@ -12852,7 +12829,7 @@ const read = {
         });
     },
     function (e, t, r) {
-      "use strict";
+      // "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       var n = (function () {
         function e() {}

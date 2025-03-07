@@ -81,31 +81,11 @@
       "sameSite": "Strict"
     },
     {
-      "name": "SSID",
-      "value": "2614509729422756",
-      "domain": ".vahanacloud.com",
-      "path": "/",
-      "expires": 1758722441.782606,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "ILG",
-      "value": "cd7130d8-2804-4254-8e48-5850c1f1277a",
-      "domain": ".vahanacloud.com",
-      "path": "/",
-      "expires": 1758722441.782737,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
       "name": "USER_ID",
       "value": "NB7PXONC0YVR2WIA0NXK",
       "domain": ".vahanacloud.com",
       "path": "/",
-      "expires": 1758722441.782772,
+      "expires": 1759303366.865407,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -115,7 +95,7 @@
       "value": "rashmi.trivedi@istar-x.com",
       "domain": ".vahanacloud.com",
       "path": "/",
-      "expires": 1758722441.782792,
+      "expires": 1759303366.865446,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -155,7 +135,7 @@
       "value": "false",
       "domain": ".console.vahanacloud.com",
       "path": "/",
-      "expires": 1758722441.782878,
+      "expires": 1759303366.865637,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -165,7 +145,7 @@
       "value": "false",
       "domain": ".console.vahanacloud.com",
       "path": "/",
-      "expires": 1758722441.782899,
+      "expires": 1759303366.865681,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -175,7 +155,7 @@
       "value": "false",
       "domain": ".console.vahanacloud.com",
       "path": "/",
-      "expires": 1758722441.782918,
+      "expires": 1759303366.86572,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -185,7 +165,7 @@
       "value": "arn:26615172991897135880142_WS",
       "domain": ".vahanacloud.com",
       "path": "/",
-      "expires": 1758722441.782936,
+      "expires": 1759303366.865759,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -216,6 +196,36 @@
       "domain": ".vahanacloud.com",
       "path": "/",
       "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ISLOGGEDIN",
+      "value": "false",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SSID",
+      "value": "9626639072844291",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": 1759303366.865276,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ILG",
+      "value": "1e3c10c5-f58e-42ca-a8c7-fed6f18792ba",
+      "domain": ".vahanacloud.com",
+      "path": "/",
+      "expires": 1759303366.865368,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
