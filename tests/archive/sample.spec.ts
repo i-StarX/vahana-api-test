@@ -16,12 +16,18 @@ test('Test API Gateway', { tag: ["@apiGateway"] }, async ({page}) => {
     const response = await page.evaluate(async () => {
 
         const env = {
+            "env": "prod",
             "production": true,
             "envProps": {
                 "orgId": "WORKSPACE3-SVGW1OPZ7D",
                 "appId": "96477173442322192121037",
                 "secureKey": "2eb45217-1dfe-47aa-9fe0-7769d2aa90bf",
-                "baseUrl": "https://middleware.vahanacloud.xyz/backend/earth/router/engine/v1"
+                "baseUrl": "https://middleware.vahanacloud.xyz/backend/earth/router/engine/v1",
+                "lat": "",
+                "lon": "",
+                "securityVersion": "2",
+                "appVersion": "1.0",
+                "platform": "WEB"
             },
         };
 

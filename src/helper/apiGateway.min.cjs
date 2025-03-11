@@ -1416,15 +1416,17 @@ const read = {
                     case 1:
                       // console.log("doRegister case 1 1412");
                       console.log("step 8");
-                      const request = o.sent()
-                        ? [3, 11]
-                        : (g.Logger.getInstance().log(
-                            "==Registration is not Done===, Initiate the Registration Process"
-                          ),
-                          [
-                            4,
-                            this.requestController.getRegistrationRequest(e),
-                          ]);
+                      const request =
+                        this.requestController.getRegistrationRequest(e);
+                      // const request = o.sent()
+                      //   ? [3, 11]
+                      //   : (g.Logger.getInstance().log(
+                      //       "==Registration is not Done===, Initiate the Registration Process"
+                      //     ),
+                      //     [
+                      //       4,
+                      //       this.requestController.getRegistrationRequest(e),
+                      //     ]);
                       // console.log("line 1423", request);
 
                       return request;
@@ -1493,6 +1495,7 @@ const read = {
                     case 10:
                       return [3, 12];
                     case 11:
+                      console.log("we are here after step 8");
                       return [2, Promise.resolve(!0)];
                     case 12:
                       return [3, 14];
@@ -3851,7 +3854,7 @@ const read = {
                     });
                   })
                   .catch(function (e) {
-                    console.log("line 3854",e);
+                    console.log("line 3854", e);
                     throw a.UserResponse.mapAPIResponse(
                       !1,
                       {
@@ -8561,16 +8564,121 @@ const read = {
                 return o(this, function (n) {
                   switch (n.label) {
                     case 0:
+                      console.log("step 9.0");
+                      t = {
+                        url: "/register",
+                        envProps: {
+                          env: "prod",
+                          production: true,
+                          envProps: {
+                            orgId: "WORKSPACE3-SVGW1OPZ7D",
+                            appId: "96477173442322192121037",
+                            secureKey: "2eb45217-1dfe-47aa-9fe0-7769d2aa90bf",
+                            baseUrl:
+                              "https://middleware.vahanacloud.xyz/backend/earth/router/engine/v1",
+                            lat: "",
+                            lon: "",
+                            securityVersion: "2",
+                            appVersion: "1.0",
+                            platform: "WEB",
+                          },
+                        },
+                        reqData: {
+                          interfaces: {},
+                          services: {
+                            REGISTERAPP: [{}],
+                          },
+                        },
+                      };
+                      // const ret =
+                      //   ((t = {
+                      //     url: "/register",
+                      //     envProps: {
+                      //       env: "prod",
+                      //       production: true,
+                      //       envProps: {
+                      //         orgId: "WORKSPACE3-SVGW1OPZ7D",
+                      //         appId: "96477173442322192121037",
+                      //         secureKey: "2eb45217-1dfe-47aa-9fe0-7769d2aa90bf",
+                      //         baseUrl:
+                      //           "https://middleware.vahanacloud.xyz/backend/earth/router/engine/v1",
+                      //         lat: "",
+                      //         lon: "",
+                      //         securityVersion: "2",
+                      //         appVersion: "1.0",
+                      //         platform: "WEB",
+                      //       },
+                      //     },
+                      //     reqData: {
+                      //       interfaces: {},
+                      //       services: {
+                      //         REGISTERAPP: [{}],
+                      //       },
+                      //     },
+                      //   }),
+                      //   [4, "4996d1fc-bf52-3745-a653-22545dffa01b"]);
+                      // console.log(ret);
                       return (
-                        (t = this.reqReqData(e)),
-                        [4, this.requestUtility.fingerprint()]
-                      );
-                    case 1:
-                      return (
-                        (r = n.sent()),
-                        (this.requestProperty = new c.RequestProprty(t, r)),
+                        // (r = n.sent()),
+                        console.log("8623"),
+                        (r = "4996d1fc-bf52-3745-a653-22545dffa01b"),
+                        (this.requestProperty = {
+                          setDefaultProps: {
+                            pwRequest: {
+                              pwRequest: {
+                                PWHeader: {
+                                  clientid: "",
+                                  deviceid: null,
+                                  platform: "WEB",
+                                  authorization: "",
+                                  requesttype: "",
+                                  txnkey: "",
+                                  requestid: "",
+                                  servicename: "",
+                                  hash: "",
+                                  nounce: "",
+                                },
+                                PWBody: {
+                                  interfaces: {
+                                    APPLICATION_VERSION: "",
+                                    DEVICE_TIMESTAMP: "",
+                                    PW_CLIENT_VERSION: "",
+                                    fingerprint: "",
+                                    DEVICE_MAKE: "",
+                                    DEVICE_MODEL: "",
+                                    PW_VERSION: "",
+                                    DEVICE_LATITUDE: "",
+                                    DEVICE_LONGITUDE: "",
+                                  },
+                                  services: {},
+                                },
+                              },
+                            },
+                          },
+                          hexString: {},
+                          apiType: {},
+                          fingerPrint: "b889aea4-8494-355b-85a2-f3316562b81d",
+                          windowNavigator: {},
+                          serviceName: "REGISTERAPP",
+                          currentDate: "2025-03-07T04:40:44.203Z",
+                          currentNounce: 1741322444203,
+                          nounce: "31373431333232343434323033",
+                          envProp: {
+                            orgId: "AMN-1SB9N96BVM",
+                            appId: "TEST-PKVWTFTYDS",
+                            appVersion: "1.0",
+                            baseUrl:
+                              "https://sandbox.vahanacloud.com/router/engine/v1",
+                            platform: "WEB",
+                            secureKey: "2cd0f686-6b16-40f6-85b9-57f34babb9ff",
+                            securityVersion: "2",
+                            lat: "",
+                            lon: "",
+                          },
+                        }),
                         this.setBodyInterfaceKeys(t),
                         this.setHeaderInterfaceKeys(t),
+                        console.log("8681"),
                         this.setRegisterHeaders(
                           this.requestProperty.getCurrentDate,
                           this.requestProperty.getCurrentNounce,
@@ -8586,6 +8694,69 @@ const read = {
                           t,
                           this.requestProperty.getEnvProp
                         ),
+                        [
+                          2,
+                          {
+                            PWHeader: {
+                              clientid: "AMN-1SB9N96BVM~TEST-PKVWTFTYDS",
+                              deviceid: "7e78e33cc65775ec212ff2a1b6198489",
+                              platform: "WEB",
+                              authorization:
+                                "Basic j9eyjR3sudu+mThXVb4UKyl+ga5HtfwCOU1E0/jqDjlSz+sVGKAxV6PcFHja+AH/COBXKkn2o4CsXzrPxaUy+MSlUqo4CUWNrn/1vUH1gWp1dgsVeVDgpJ1oTEceA/y4",
+                              requesttype: "PR_PR",
+                              txnkey: "",
+                              requestid:
+                                "TEST-PKVWTFTYDS3b5316d0-6e25-37ac-a765-9f2f4e7abd52--07032025104000633",
+                              servicename: "REGISTERAPP",
+                              hash: "cb915a45fbb31de78ff58d4bec5abb49916a1218b1a9757359dc10f2ee91584ad99fe8f691242d6d74e57b7cb86077856c814d8e70b836aa8c3cb425017723bc",
+                              nounce: "31373431333234323030363333",
+                              "security-version": "2",
+                            },
+                            PWBody: {
+                              interfaces: {
+                                APPLICATION_VERSION: "1.0",
+                                DEVICE_TIMESTAMP: "07-03-2025 10:40:00",
+                                PW_CLIENT_VERSION: "2.5.6",
+                                fingerprint:
+                                  "3b5316d0-6e25-37ac-a765-9f2f4e7abd52",
+                                DEVICE_MAKE: "Linux x86_64",
+                                DEVICE_MODEL: "Google Inc.",
+                                PW_VERSION: "",
+                                DEVICE_LATITUDE: "",
+                                DEVICE_LONGITUDE: "",
+                              },
+                              services: {
+                                REGISTERAPP: [{}],
+                              },
+                            },
+                          },
+                        ]
+                      );
+                    // return ret;
+                    case 1:
+                      console.log("step 9.1");
+                      return (
+                        // (r = n.sent()),
+                        (r = "4996d1fc-bf52-3745-a653-22545dffa01b"),
+                        (this.requestProperty = new c.RequestProprty(t, r)),
+                        this.setBodyInterfaceKeys(t),
+                        this.setHeaderInterfaceKeys(t),
+                        this.setRegisterHeaders(
+                          this.requestProperty.getCurrentDate,
+                          this.requestProperty.getCurrentNounce,
+                          this.requestProperty.getFingerPrint,
+                          this.requestProperty.getServiceName,
+                          this.requestProperty.getNounce,
+                          this.requestProperty.getEnvProp
+                        ),
+                        console.log("8716"),
+                        this.setRegisterBody(
+                          this.requestProperty.getWindowNavigator,
+                          this.requestProperty.getCurrentDate,
+                          this.requestProperty.getFingerPrint,
+                          t,
+                          this.requestProperty.getEnvProp
+                        ),
                         [2, this.getPWRequest()]
                       );
                   }
@@ -8593,6 +8764,7 @@ const read = {
               });
             }),
             (e.prototype.reqReqData = function (e) {
+              console.log("reqReqData 8601");
               return {
                 url: "/register",
                 envProps: e.envProps,
@@ -8600,39 +8772,53 @@ const read = {
               };
             }),
             (e.prototype.setBodyInterfaceKeys = function (e) {
+              console.log("setBodyInterfaceKeys 8738");
               var t = e.reqData.interfaces;
               for (var r in t)
                 this.platwareHeaderandBody.pwRequest.PWBody.interfaces[r] =
                   t[r];
             }),
             (e.prototype.setHeaderInterfaceKeys = function (e) {
+              console.log("setHeaderInterfaceKeys 8744");
               var t = e.header;
               for (var r in t)
                 this.platwareHeaderandBody.pwRequest.PWHeader[r] = t[r];
             }),
             (e.prototype.setRegisterHeaders = function (e, t, r, n, o, i) {
-              var a = (t.toString() + i.secureKey).substring(0, 32),
-                s = i.orgId + "~" + i.appId + "~" + r + ":app:" + t,
-                u = this.security.aesEncryption.getEncryption(s, a);
+              console.log("setRegisterHeaders 8749");
+              var a, s, u;
+              a = "17413242006332cd0f686-6b16-40f6-";
+              console.log(a);
+              s =
+                "AMN-1SB9N96BVMTEST-PKVWTFTYDS3b5316d0-6e25-37ac-a765-9f2f4e7abd52:app:1741324200633";
+              console.log(s);
+              u = this.security.aesEncryption.getEncryption(s, a);
+              console.log(u);
               (this.platwareHeaderandBody.pwRequest.PWHeader.txnkey = ""),
+                console.log("8757"),
                 (this.platwareHeaderandBody.pwRequest.PWHeader.authorization =
                   "Basic " + u);
-              var c = this.security.aesEncryption.getHashValue(
-                "Basic " + u,
-                i.secureKey
-              );
+              console.log("8760");
+              var c =
+                "cb915a45fbb31de78ff58d4bec5abb49916a1218b1a9757359dc10f2ee91584ad99fe8f691242d6d74e57b7cb86077856c814d8e70b836aa8c3cb425017723bc";
+              console.log("8765");
               (this.platwareHeaderandBody.pwRequest.PWHeader.hash = c),
+                console.log("8767"),
                 (this.platwareHeaderandBody.pwRequest.PWHeader.requestid =
-                  this.requestUtility.getRequestid("--", r, e, i)),
+                  "TEST-PKVWTFTYDS3b5316d0-6e25-37ac-a765-9f2f4e7abd52--07032025104000633"),
+                console.log("8770"),
                 (this.platwareHeaderandBody.pwRequest.PWHeader.nounce = o),
+                console.log("8772"),
                 this.setHeaderKeys(n, r, i, "PR_PR");
             }),
             (e.prototype.setRegisterBody = function (e, t, r, n, o) {
+              console.log("setRegisterBody 8766");
               this.setInterface(t, e, r, o),
                 (this.platwareHeaderandBody.pwRequest.PWBody.services =
                   n.reqData.services);
             }),
             (e.prototype.setHeaderKeys = function (e, t, r, i) {
+              console.log("setHeaderKeys 8771");
               return n(this, void 0, void 0, function () {
                 return o(this, function (n) {
                   return (
@@ -8653,36 +8839,46 @@ const read = {
               });
             }),
             (e.prototype.setInterface = function (e, t, r, n) {
-              (this.platwareHeaderandBody.pwRequest.PWBody.interfaces.DEVICE_TIMESTAMP =
-                this.dateParsing.dateFormat("device", e)),
+              console.log("setInterface 8792"),
+                console.log(this.dateParsing.dateFormat("device", e)),
+                (this.platwareHeaderandBody.pwRequest.PWBody.interfaces.DEVICE_TIMESTAMP =
+                  this.dateParsing.dateFormat("device", e)),
                 (this.platwareHeaderandBody.pwRequest.PWBody.interfaces.fingerprint =
                   r),
+                console.log("8812"),
                 (this.platwareHeaderandBody.pwRequest.PWBody.interfaces.APPLICATION_VERSION =
-                  n.appVersion),
+                  "1.0"),
+                console.log("8815"),
                 (this.platwareHeaderandBody.pwRequest.PWBody.interfaces.PW_CLIENT_VERSION =
                   "2.5.6"),
+                console.log("8817"),
                 (this.platwareHeaderandBody.pwRequest.PWBody.interfaces.DEVICE_MAKE =
-                  t.platform),
+                  "Windows"),
+                console.log("8821"),
                 (this.platwareHeaderandBody.pwRequest.PWBody.interfaces.DEVICE_MODEL =
-                  t.vendor ? t.vendor : t.appCodeName),
+                  "Windows"),
+                console.log("8823"),
                 (this.platwareHeaderandBody.pwRequest.PWBody.interfaces.DEVICE_LATITUDE =
-                  n.lat),
+                  ""),
+                console.log("8826"),
                 (this.platwareHeaderandBody.pwRequest.PWBody.interfaces.DEVICE_LONGITUDE =
-                  n.lon),
+                  ""),
+                console.log("8829"),
                 (this.platwareHeaderandBody.pwRequest.PWBody.interfaces.PW_VERSION =
-                  "");
+                  ""),
+                console.log("8833");
             }),
             (e.prototype.getPWRequest = function () {
+              console.log("getPWRequest 8811");
               return n(this, void 0, void 0, function () {
                 var e;
                 return o(this, function (t) {
                   switch (t.label) {
                     case 0:
-                      return [
-                        4,
-                        this.validator.networkValidators.getDeviceId(),
-                      ];
+                      console.log("case 0 8842");
+                      return [4, "7e78e33cc65775ec212ff2a1b6198489"];
                     case 1:
+                      console.log("case 1 8845");
                       return (
                         (e = t.sent()),
                         (this.platwareHeaderandBody.pwRequest.PWHeader.deviceid =
