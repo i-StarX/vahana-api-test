@@ -4,12 +4,12 @@ export default class Hooks {
         return false;
     }
 
-    static async authenticate(page, body, headers, env) {
-        const r = await page.evaluate(() => {
-            return window.doAuthentication();
-        });
+    // static async authenticate(page, body, headers, env) {
+    //     const r = await page.evaluate(() => {
+    //         return window.doAuthentication();
+    //     });
 
-        console.log(r)
-    }
+    //     console.log(r)
+    // }
 
 }
