@@ -29,13 +29,11 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
-    storageState: './.auth/session.json',
     headless: true
   },
   timeout: 2 * 60 * 1000,
   globalTimeout: 25 * 60 * 1000,
-  expect: {timeout: 120000},
+  expect: { timeout: 120000 },
   /* Configure projects for major browsers */
   projects: [
     {
