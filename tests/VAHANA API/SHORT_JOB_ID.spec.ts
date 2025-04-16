@@ -6,7 +6,7 @@ declare global {
     }
 }
 
-test('SHORT_JOB_ID', { tag: ["@get_job_list"] }, async ({ page }) => {
+test('SHORT_JOB_ID', { tag: ["@regression"] }, async ({ page }) => {
 
     await page.goto('http://127.0.0.1:8080/');
 

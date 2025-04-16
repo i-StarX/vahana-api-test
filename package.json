@@ -10,7 +10,8 @@
     "tag": "npx playwright test --grep",
     "start": "node dist/server.mjs",
     "generate-allure": "allure generate allure-results -o allure-report --clean",
-    "open-allure": "npm run generate-allure && allure open allure-report"
+    "open-allure": "npm run generate-allure && allure open allure-report",
+    "api-server": "http-server -p 8080"
   },
   "keywords": [],
   "author": "",

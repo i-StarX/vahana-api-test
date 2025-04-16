@@ -6,7 +6,7 @@ declare global {
     }
 }
 
-test('INVALID_API_DATA', { tag: ["@get_job_list"] }, async ({ page }) => {
+test('INVALID_API_DATA', { tag: ["@regression"] }, async ({ page }) => {
 
     await page.goto('http://127.0.0.1:8080/');
 
